@@ -1,0 +1,30 @@
+[project]
+name = "coder"
+version = "0.1.0"
+description = "coder using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "apscheduler>=3.11.2",
+    "crewai[tools]==1.7.2",
+    "fastapi>=0.128.0",
+    "fastapi-sso>=0.17.0",
+    "litellm>=1.75.3",
+    "ollama>=0.6.1",
+    "pydantic[email]>=2.11.10",
+]
+
+[project.scripts]
+coder = "coder.main:run"
+run_crew = "coder.main:run"
+train = "coder.main:train"
+replay = "coder.main:replay"
+test = "coder.main:test"
+run_with_trigger = "coder.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
