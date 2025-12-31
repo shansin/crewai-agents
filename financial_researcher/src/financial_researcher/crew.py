@@ -7,8 +7,7 @@ from crewai_tools import SerperDevTool
 class ResearchCrew():
     """Research crew for comprehensive topic analysis and reporting"""
 
-    #llm="ollama_chat/gpt-oss:20b"
-    llm="gemini/gemini-2.0-flash"
+    llm="ollama_chat/llama3.1:8b"
 
     agents_config = 'config/agents.yaml'
     tasks_config = 'config/tasks.yaml'
